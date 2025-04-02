@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { keycloakConfig } from './config'
-import axiosInstance from '@lib/axios'
+import axiosInstance from '@acme/utils/axiosInstance'
 import axios, { AxiosError } from 'axios'
 
 interface KeycloakErrorResponse {
@@ -49,6 +49,7 @@ export async function POST(request: Request) {
         email: userInfo.email,
         name: userInfo.name,
         token: tokenData.access_token,
+        refresh_token: tokenData.refresh_token,
       },
     })
   } catch (error) {
