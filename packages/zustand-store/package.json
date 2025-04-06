@@ -1,25 +1,31 @@
 {
   "name": "@microfrontends/zustand-store",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts src/auth.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts src/auth.ts --watch --format esm,cjs --dts --onSuccess \"touch dist/index.mjs dist/index.js dist/index.d.ts\""
+    "build": "tsup src/* --format esm,cjs --dts",
+    "dev": "tsup src/* --format esm,cjs --dts --watch"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./auth": {
+      "types": "./dist/auth.d.ts",
+      "import": "./dist/auth.mjs",
+      "require": "./dist/auth.js"
     }
   },
   "dependencies": {
-    "zustand": "^4.5.6"
+    "@acme/utils": "workspace:*",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
   }
 }

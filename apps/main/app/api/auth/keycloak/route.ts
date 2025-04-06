@@ -27,13 +27,12 @@ export async function POST(request: Request) {
     formData.append('username', username)
     formData.append('password', password)
 
+    // Use axiosInstance for automatic token handling
     const { data: tokenData } = await axiosInstance.post(tokenEndpoint, formData.toString(), {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     })
-
-    console.log('token data:', tokenData)
     
     // Get user info
     const userInfoEndpoint = `${keycloakConfig.url}/realms/${keycloakConfig.realm}/protocol/openid-connect/userinfo`
@@ -43,7 +42,8 @@ export async function POST(request: Request) {
       },
     })
 
-    return NextResponse.json({
+    // Create response with user data
+    const response = NextResponse.json({
       user: {
         id: userInfo.sub,
         email: userInfo.email,
@@ -52,6 +52,23 @@ export async function POST(request: Request) {
         refresh_token: tokenData.refresh_token,
       },
     })
+
+    // Set cookies
+    response.cookies.set('token', tokenData.access_token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      path: '/',
+    })
+
+    response.cookies.set('refresh_token', tokenData.refresh_token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      path: '/',
+    })
+
+    return response
   } catch (error) {
     console.error('Authentication error:', error)
     if (axios.isAxiosError(error)) {
