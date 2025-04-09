@@ -1,12 +1,11 @@
 {
   "name": "@acme/utils",
   "version": "0.0.1",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/vercel/examples.git",
+  "license": "MIT",
   "scripts": {
-    "dev": "tsup src/* --format esm,cjs --dts --watch --external next",
-    "build": "tsup src/* --format esm,cjs --dts --external next",
+    "dev": "pnpm build --watch",
+    "build": "tsup src/* --format esm,cjs --dts --external react",
     "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
     "clean": "rm -rf dist && rm -rf .turbo"
   },
@@ -49,18 +48,10 @@
   "files": [
     "dist"
   ],
-  "peerDependencies": {
-    "next": "^14.2.0"
-  },
-  "dependencies": {
-    "axios": "^1.6.7"
-  },
   "devDependencies": {
-    "@types/axios": "^0.14.4",
-    "@types/node": "^20.11.19",
     "eslint": "^8.16.0",
     "eslint-config-acme": "workspace:*",
-    "tsup": "^8.0.2",
-    "typescript": "^5.3.3"
+    "tsup": "^5.12.8",
+    "typescript": "^4.5.5"
   }
 }

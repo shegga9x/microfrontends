@@ -15,7 +15,6 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true,
       "dependsOn": ["^build"]
     },
     "lint": {
@@ -32,6 +31,5 @@
       "dependsOn": ["^build"],
       "outputs": ["**/node_modules/.cache/tsbuildinfo.json"]
     }
-  },
-  "globalDependencies": ["tsconfig.json"]
+  }
 }

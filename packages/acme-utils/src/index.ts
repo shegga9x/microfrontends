@@ -20,5 +20,3 @@ export function matchingTextColor(color: string) {
 
   return yiq >= 128 ? '#000' : '#fff'
 }
-
-export { default as axiosInstance } from './axiosInstance';

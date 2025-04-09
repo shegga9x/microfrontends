@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { PrefetchCrossZoneLinks } from '@acme/components/prefetch'
 import { Layout } from '@vercel/examples-ui'
 import '@vercel/examples-ui/globals.css'
-import { Counter } from './components/Counter'
 
 export const metadata: Metadata = {
   title: 'Microfrontends - Docs',
@@ -18,7 +17,6 @@ export default function RootLayout({
     <html>
       <body>
         <Layout title="Microfrontends" path="solutions/microfrontends">
-          <Counter />
           {children}
         </Layout>
         <PrefetchCrossZoneLinks hrefs={['/', '/about']} />

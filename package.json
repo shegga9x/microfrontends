@@ -13,7 +13,7 @@
     "build:docs": "turbo run build --filter=docs...",
     "changeset": "changeset",
     "clean": "turbo run clean && rm -rf node_modules",
-    "dev": "turbo run dev --parallel --no-cache",
+    "dev": "turbo run dev",
     "format": "prettier --write .",
     "lint": "turbo run lint",
     "release": "turbo run build --filter=main... && changeset publish",
@@ -31,9 +31,5 @@
   "engines": {
     "node": "20.x",
     "pnpm": "9.4.0"
-  },
-  "dependencies": {
-    "axios": "^1.6.7",
-    "zustand": "^4.5.6"
   }
 }
