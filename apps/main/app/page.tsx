@@ -2,6 +2,7 @@ import { Page, Text, Code, Link, Snippet } from '@vercel/examples-ui'
 import { Navbar } from '@acme/components/navbar'
 import { Button, Quote } from '@acme/design-system'
 import { ColoredButton } from './components/colored-button'
+import { Counter } from './components/Counter'
 
 export default function Home(): React.ReactNode {
   return (
@@ -115,6 +116,7 @@ export default function Home(): React.ReactNode {
   root: true,
   extends: ['acme'],
 }`}</Snippet>
+      <Counter />
     </Page>
   )
 }
