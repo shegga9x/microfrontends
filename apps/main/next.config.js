@@ -1,4 +1,4 @@
-const { DOCS_URL } = process.env
+const { DOCS_URL, POST_URL } = process.env
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,6 +18,21 @@ const nextConfig = {
       {
         source: '/docs-static/:path*',
         destination: `${DOCS_URL}/docs-static/:path*`,
+      },
+      /**
+       * Rewrites for ShareSphere
+       */
+      {
+        source: '/post',
+        destination: `${POST_URL}/post`,
+      },
+      {
+        source: '/post/:path*',
+        destination: `${POST_URL}/post/:path*`,
+      },
+      {
+        source: '/sharesphere-static/:path*',
+        destination: `${POST_URL}/sharesphere-static/:path*`,
       },
     ]
   },

@@ -1,4 +1,5 @@
 import { Counter } from './components/Counter'
+import { axiosInstance } from '@acme/utils';
 
 export default function Home() {
   return (
