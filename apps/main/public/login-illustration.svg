@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="#4F46E5" fill-opacity="0.1"/>
+  
+  <!-- Lock Body -->
+  <rect x="150" y="120" width="100" height="120" rx="10" fill="#4F46E5"/>
+  
+  <!-- Lock Top -->
+  <path d="M170 120C170 106.745 180.745 96 194 96H206C219.255 96 230 106.745 230 120V140H170V120Z" fill="#4F46E5"/>
+  
+  <!-- Keyhole -->
+  <circle cx="200" cy="170" r="15" fill="white"/>
+  <rect x="195" y="170" width="10" height="30" fill="white"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="120" cy="120" r="20" fill="#7C3AED" fill-opacity="0.3"/>
+  <circle cx="280" cy="280" r="30" fill="#7C3AED" fill-opacity="0.3"/>
+  <circle cx="150" cy="250" r="15" fill="#7C3AED" fill-opacity="0.3"/>
+  <circle cx="250" cy="150" r="25" fill="#7C3AED" fill-opacity="0.3"/>
+</svg> 

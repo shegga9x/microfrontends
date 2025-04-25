@@ -7,16 +7,24 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
+    ".": "./src/index.ts",
     "./navbar": "./src/navbar.tsx",
-    "./prefetch": "./src/prefetch-cross-zone-links.tsx"
+    "./prefetch": "./src/prefetch-cross-zone-links.tsx",
+    "./layout": "./src/layout.tsx"
   },
   "typesVersions": {
     "*": {
+      ".": [
+        "./src/index.ts"
+      ],
       "navbar": [
         "./src/navbar.tsx"
       ],
       "prefetch": [
         "./src/prefetch-cross-zone-links.tsx"
+      ],
+      "layout": [
+        "./src/layout.tsx"
       ]
     }
   },
@@ -26,15 +34,16 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0-0",
-    "react-dom": "^18.0.0-0"
+    "next": "^14.2.0",
+    "react": "^18.3.1",
+    "react-dom": "18.3.1"
   },
   "dependencies": {
     "@acme/design-system": "workspace:*",
     "@acme/utils": "workspace:*",
     "@vercel/examples-ui": "^1.0.5",
-    "clsx": "^1.2.1"
+    "clsx": "^1.2.1",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.10",

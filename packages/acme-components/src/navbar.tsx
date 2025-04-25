@@ -1,34 +1,34 @@
-import { Link, A } from '@vercel/examples-ui'
+import type { ReactNode } from 'react'
 
-export function Navbar({ isDocsApp }: { isDocsApp?: boolean }) {
+export function Navbar({ isDocsApp }: { isDocsApp?: boolean }): ReactNode {
   return isDocsApp ? (
     <ul className="inline-flex mb-4">
       <li>
-        <A href="/">Home (Multi-Zones)</A>
+        <a href="/">Home (Multi-Zones)</a>
       </li>
       <li className="ml-4">
-        <Link href="/docs">Docs</Link>
+        <a href="/docs">Docs</a>
       </li>
       <li className="ml-4">
-        <Link href="/docs/about">About Docs</Link>
+        <a href="/docs/about">About Docs</a>
       </li>
       <li className="ml-4">
-        <Link href="/post">Posts</Link>
+        <a href="/post">Posts</a>
       </li>
     </ul>
   ) : (
     <ul className="inline-flex mb-4">
       <li>
-        <Link href="/">Home</Link>
+        <a href="/">Home</a>
       </li>
       <li className="ml-4">
-        <Link href="/about">About</Link>
+        <a href="/about">About</a>
       </li>
       <li className="ml-4">
-        <A href="/docs">Docs (Multi-Zones)</A>
+        <a href="/docs">Docs (Multi-Zones)</a>
       </li>
       <li className="ml-4">
-        <Link href="/post">Posts</Link>
+        <a href="/post">Posts</a>
       </li>
     </ul>
   )
