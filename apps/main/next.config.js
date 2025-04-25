@@ -16,6 +16,10 @@ const nextConfig = {
         destination: `${DOCS_URL}/docs/:path*`,
       },
       {
+        source: '/_next/static/:path*',
+        destination: `${DOCS_URL}/_next/static/:path*`,
+      },
+      {
         source: '/docs-static/:path*',
         destination: `${DOCS_URL}/docs-static/:path*`,
       },

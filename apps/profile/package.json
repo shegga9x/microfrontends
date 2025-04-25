@@ -17,14 +17,14 @@
     "@acme/shared": "workspace:*",
     "@acme/utils": "workspace:*",
     "@vercel/examples-ui": "^2.0.1",
-    "next": "14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "next": "^14.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.11.0",
     "eslint-config-acme": "workspace:*",

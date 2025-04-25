@@ -1,26 +1,15 @@
-import type { Metadata } from 'next'
-import { PrefetchCrossZoneLinks } from '@acme/components/prefetch'
-import { Layout } from '@vercel/examples-ui'
-import '@vercel/examples-ui/globals.css'
+import './globals.css'
+import { Layout } from '@acme/components/layout'
 
-export const metadata: Metadata = {
-  title: 'Microfrontends - Main',
-  description: 'Example demonstrating vertical microfrontends on Vercel',
+export const metadata = {
+  title: 'Modern Social Platform',
+  description: 'A modern social platform built with Next.js',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
-  return (
-    <html>
-      <body>
-        <Layout title="Microfrontends" path="solutions/microfrontends">
-          {children}
-        </Layout>
-        <PrefetchCrossZoneLinks hrefs={['/docs', '/docs/about']} />
-      </body>
-    </html>
-  )
+}) {
+  return <Layout>{children}</Layout>
 }

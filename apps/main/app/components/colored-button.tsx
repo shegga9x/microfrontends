@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Button, Quote } from '@acme/design-system'
 import { matchingTextColor, randomColor } from '@acme/utils'
+import { useEffect, useState } from 'react'
 
 export function ColoredButton() {
   const [bgColor, setBgColor] = useState('')
@@ -15,23 +14,5 @@ export function ColoredButton() {
 
   useEffect(changeColor, [])
 
-  return (
-    <>
-      {bgColor && textColor && (
-        <>
-          <Button
-            className="mb-4"
-            style={{
-              backgroundColor: bgColor,
-              color: textColor,
-              borderColor: textColor,
-            }}
-            onClick={changeColor}
-          >
-            Change Color
-          </Button>
-        </>
-      )}
-    </>
-  )
+  return <></>
 }
