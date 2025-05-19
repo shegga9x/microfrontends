@@ -14,7 +14,7 @@ export function Counter() {
           className="px-4 py-2 bg-red-500 black rounded hover:bg-red-600"
         >
           Decrement
-        </button>
+      </button>
         <span className="text-2xl font-bold">{count}</span>
         <button 
           onClick={increment}

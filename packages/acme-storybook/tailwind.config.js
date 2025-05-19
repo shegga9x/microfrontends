@@ -1,12 +1,15 @@
 module.exports = {
-  presets: [
-    require('@vercel/examples-ui/tailwind'),
-    require('@acme/design-system/tailwind'),
-  ],
   content: [
-    // All the packages that might include stories
-    './node_modules/@vercel/examples-ui/**/*.js',
-    './node_modules/@acme/design-system/**/*.js',
-    './node_modules/@acme/pages/**/*.js',
+    // your Storybook stories and components
+    './src/**/*.{js,jsx,ts,tsx,mdx}',
+    // only scan the SOURCE dirs of your shared packages
+    '../acme-design-system/src/**/*.{js,jsx,ts,tsx}',
+    '../acme-components/src/**/*.{js,jsx,ts,tsx}',
+    '../acme-shared/src/**/*.{js,jsx,ts,tsx}',
+    '../acme-utils/src/**/*.{js,jsx,ts,tsx}',
   ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }

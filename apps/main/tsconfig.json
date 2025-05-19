@@ -14,10 +14,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "types": ["next", "next/server", "node"],
     "paths": {
       "@lib/*": ["lib/*"],
       "@components": ["components/index"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@acme/utils":    ["packages/acme-utils/src"],
+      "@acme/utils/*":  ["packages/acme-utils/src/*"]
     },
     "incremental": true,
     "plugins": [

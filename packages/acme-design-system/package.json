@@ -5,12 +5,12 @@
   "license": "MIT",
   "scripts": {
     "dev": "pnpm build:swc -w",
-    "build": "if exist dist rmdir /s /q dist && pnpm build:swc && pnpm types",
+    "build": "rimraf dist && pnpm build:swc && pnpm types",
     "build:swc": "pnpm copy-tailwind && swc src -d dist",
-    "copy-tailwind": "if not exist dist mkdir dist && copy src\\tailwind.cjs dist\\tailwind.cjs",
+    "copy-tailwind": "mkdir -p dist && cp src/tailwind.cjs dist/tailwind.cjs",
     "types": "tsc --emitDeclarationOnly",
-    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
-    "clean": "if exist dist rmdir /s /q dist && if exist .turbo rmdir /s /q .turbo"
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix --quiet",
+    "clean": "rimraf dist .turbo"
   },
   "sideEffects": false,
   "type": "module",

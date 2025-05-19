@@ -30,7 +30,7 @@
   },
   "scripts": {
     "clean": "rm -rf ./dist && rm -rf .turbo",
-    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix --quiet",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -43,12 +43,14 @@
     "@acme/utils": "workspace:*",
     "@vercel/examples-ui": "^1.0.5",
     "clsx": "^1.2.1",
-    "react-icons": "^5.5.0"
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.10",
     "eslint": "^8.38.0",
     "eslint-config-acme": "workspace:*",
+    "eslint-config-next": "^15.3.2",
+    "eslint-plugin-next": "^0.0.0",
     "typescript": "^5.0.4"
   }
 }
