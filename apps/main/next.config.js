@@ -3,6 +3,8 @@ const { DOCS_URL, POST_URL } = process.env
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
+    console.log("DOCS_URL", DOCS_URL);
+    
     return [
       /**
        * Rewrites for Multi-Zones
@@ -42,4 +44,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
